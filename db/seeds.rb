@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
+
 olivier = User.create(name: "Olivier", password: "123456", address: "Hellersdorf, berlin, germany", email: "oliv@gmail.com")
 john = User.create(name: "John", password: "654321", address: "Spandau, berlin, germany", email: "john@gmail.com")
 alex = User.create(name: "Alex", password: "123465", address: "Lichtenberg, Berlin, Germany", email: "alex@gmail.com")
