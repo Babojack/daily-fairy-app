@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     @fairy = Fairy.find(params[:fairy_id])
-    @booking.workspace = @workspace
+    @booking.fairy = @fairy
 
     if @booking.save
       redirect_to booking_path(@booking)
