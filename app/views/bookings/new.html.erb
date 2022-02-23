@@ -1,0 +1,11 @@
+<h1>Make a new booking for <%= @fairy.name %></h1>
+<p> known for her <%=@fairy.super_power %>. <%= @fairy.description %> </p>
+
+<%= simple_form_for [@fairy, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Your booking!', booking_path(@booking) %>
