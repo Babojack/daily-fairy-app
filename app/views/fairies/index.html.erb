@@ -1,0 +1,17 @@
+<h1>Our Fairies</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>All fairies</h1>
+      <ul class="list-group mb-3">
+        <% @fairies.each do |fairy| %>
+          <li class="list-group-item">
+            <%= link_to fairy.name, fairy_path(fairy) %>
+          </li>
+        <% end %>
+      </ul>
+      <%= link_to "Back", fairy_path %>
+      <%= link_to "Add a new fairy", new_fairy_path %>
+    </div>
+  </div>
+</div>
