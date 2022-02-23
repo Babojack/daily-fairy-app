@@ -1,2 +1,55 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.wallpaperup.com/uploads/wallpapers/2015/06/26/734988/ec06623a7c65173c39943b61edf15315.jpg);">
+  <div class="container">
+    <h1>DAILY FAIRIES</h1> 
+    <h2><strong>Magical creatures</strong> for <strong>cheap people</strong>!</h2>
+    <p>Change your life with magic by renting one of our fairies from around the universe.</p>
+    <a class="btn btn-flat" href="#" id="view_fairies">VIEW FAIRIES 🧚🏼 </a>
+  </div>
+</div>
+
+<%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-flat" id="search_bar">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+<% end %>
+
+<h2><strong>Magical skills</strong></h2>
+
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1524373050940-8f19e9b858a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)">
+    Fairy 1
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://p2.piqsels.com/preview/142/668/57/fairy-girl-fantasy-girl-woman.jpg)">
+    Fairy 2
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/evil-fairy-brenda-cassimiro.jpg)">
+    Fairy 3
+  </div>
+</div>
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Daily Fairies <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
+
+
+
+
+
+
+
