@@ -17,6 +17,7 @@ class FairiesController < ApplicationController
       redirect_to fairy_path(@fairy)
     else
       render "new"
+    end
   end
 
   private
