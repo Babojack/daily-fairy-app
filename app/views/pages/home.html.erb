@@ -9,14 +9,28 @@
 
 <%= simple_form_for :search, url: root_path, method: :get do |f| %>
   <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Tell us your wish..." />
     <button name="button" type="submit" class="btn btn-flat" id="search_bar">
       <i class="fas fa-search"></i> Search
     </button>
   </div>
 <% end %>
 
-<h2><strong>Magical skills</strong></h2>
+<h2 class="world-class-fairies"><strong>Find your muse</strong></h2>
+
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1524373050940-8f19e9b858a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)">
+    Fairy 1
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://p2.piqsels.com/preview/142/668/57/fairy-girl-fantasy-girl-woman.jpg)">
+    Fairy 2
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/evil-fairy-brenda-cassimiro.jpg)">
+    Fairy 3
+  </div>
+</div>
 
 <div class="cards">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1524373050940-8f19e9b858a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)">
