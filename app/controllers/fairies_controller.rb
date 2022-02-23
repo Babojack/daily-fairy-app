@@ -8,15 +8,16 @@ class FairiesController < ApplicationController
   end
 
   def new
-    @fairy =Fairy.new
+    @fairy = Fairy.new
   end
 
   def create
     @fairy = Fairy.create(fairy_params)
     if @fairy.save
-      redirect_to fairy_path(@fairy)
+      redirect_to fairy_path(fairy)
     else
       render "new"
+    end
   end
 
   private

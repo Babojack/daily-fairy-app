@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sam-offset-1">
-      <h1><%= @fairies.name %></h1>
-
-      <p><%= @fairies.description %></p>
-      <%= @fairies.super_power %>
-      <p></p><%= @fairies.price %>
+      <h1><%= @fairy.name %></h1>
+      <p><%= @fairy.description %></p>
+      <%= @fairy.super_power %>
+      <p></p><%= @fairy.price %>
     </div>
   </div>
 </div>
 
-<%= link_to "Book now", booking_path %>
+<%= link_to "Book now", new_booking_path %>
+<%= link_to "Back to home", root_path %>
