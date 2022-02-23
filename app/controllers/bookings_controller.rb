@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
 
     @fairy = Fairy.find(params[:fairy_id])
     @booking.fairy = @fairy
-
+   
     if @booking.save
       redirect_to booking_path(@booking)
     else
