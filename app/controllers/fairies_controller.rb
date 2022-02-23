@@ -7,6 +7,18 @@ class FairiesController < ApplicationController
   def show
   end
 
+  def new
+    @fairy =Fairy.new
+  end
+
+  def create
+    @fairy = Fairy.create(fairy_params)
+    if @fairy.save
+      redirect_to fairy_path(@fairy)
+    else
+      render "new"
+  end
+
   private
 
   def fairy_params
