@@ -5,9 +5,13 @@ class Fairy < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_name_and_superpower_description,
-    against: [ :name 'A', :super_power 'C', :description 'B'],
+    against: [
+      [:name, 'A'],
+      [:super_power, 'B'],
+      [:description, 'C']
+    ],
     using: {
       tsearch: { prefix: true }
     }
-end
+
 end
