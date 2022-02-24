@@ -1,8 +1,13 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Fairies</h1>
+    </div>
+  </div>
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>All fairies</h1>
       <ul class="list-group mb-3">
         <% @fairies.each do |fairy| %>
           <li class="list-group-item">
@@ -14,5 +19,33 @@
       <%= link_to "Back", root_path %>
 
     </div>
+  </div>
+</div> -->
+
+  <div class="row">
+    <% @fairies.each do |fairy| %>
+      <div class="col-md-4">
+        <div class="fairy-card">
+          <img class="fairy-card-image w-50" src="https://cdn.pixabay.com/photo/2021/11/01/03/24/fairy-6759295_1280.png"/>
+          <div class="fairy-card-content">
+            <div class="fairy-card-title">
+              <h4><%= fairy.name %></h4>
+            </div>
+            <p><%= fairy.description %></p>
+            <div class="flex">
+              <div class="flex">
+                <i class="material-icons me-2">🧚🏼</i><span>€<%= fairy.price %></span>
+              </div>
+              <div class="flex ms-3">
+                <i class="material-icons me-2"><strong>Power:</strong> <%= fairy.super_power %></i> 
+              </div>
+            </div>
+          </div>
+          <div class="fairy-card-actions">
+            <%= link_to "VIEW FAIRY", fairy_path(fairy) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
