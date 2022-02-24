@@ -27,7 +27,7 @@
     <% @fairies.each do |fairy| %>
       <div class="col-md-4">
         <div class="fairy-card">
-          <img class="fairy-card-image w-50" src="https://cdn.pixabay.com/photo/2021/11/01/03/24/fairy-6759295_1280.png"/>
+          <%= cl_image_tag fairy.photo.key, height: 300, width: 400, crop: :fill %>
           <div class="fairy-card-content">
             <div class="fairy-card-title">
               <h4><%= fairy.name %></h4>
@@ -38,7 +38,7 @@
                 <i class="material-icons me-2">🧚🏼</i><span>€<%= fairy.price %></span>
               </div>
               <div class="flex ms-3">
-                <i class="material-icons me-2"><strong>Power:</strong> <%= fairy.super_power %></i> 
+                <i class="material-icons me-2"><strong>Power:</strong> <%= fairy.super_power %></i>
               </div>
             </div>
           </div>
