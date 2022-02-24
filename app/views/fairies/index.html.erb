@@ -6,6 +6,7 @@
       <ul class="list-group mb-3">
         <% @fairies.each do |fairy| %>
           <li class="list-group-item">
+          <%= cl_image_tag fairies.photo %>
             <%= link_to fairy.name, fairy_path(fairy) %>
           </li>
         <% end %>

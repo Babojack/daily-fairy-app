@@ -17,6 +17,7 @@ salma = User.create(name: 'Salma',  password: "123456", address: "Ara village  P
 Fairy.destroy_all
 
 tinker = Fairy.create!(name: "Tinker Bell", super_power: "sassy sidekick", description: "A Fairy's work is much more than at first it might appear. Suppose your broken clock ticks, though it hasn't in a year. Perchance you find a toy you lost, or jingling bells you hear. It all means that one very special fairy might be near", price: 250, user: olivier)
+tinker.photo.attach(io: file = URI.open("https://source.unsplash.com/featured/?desk"), filename: "desk", content_type: 'image/png')
 thumbelina = Fairy.create!(name: "Thumbelina", super_power: "resilience", description: "a tiny young girl who is not as big as her adoptive mother's thumb, and falls in love with the handsome fairy prince Cornelius.", price: 150, user: alex)
 priwinkle = Fairy.create!( name: 'Periwinkle', super_power:' defrost Berlin cold nights and turn the snow into Marghartitta' , description: ' She leaves the wood snowy woods at nights , calls you call for a warm night she is your bar tender she leaves you tinder', price: 200, user: murjana )
 sil = Fairy.create!(name: "Silvermist", super_power: "calm, practical and thoughful", description: "a Water fairy with an East Asian appearance with pale skin, brown eyes, and black hair.", price: 210, user: john)
