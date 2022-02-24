@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def dashboard
+    @bookings = Booking.all
+  end
+
   def show
     @booking = Booking.find(params[:id])
   end
@@ -16,7 +20,7 @@ class BookingsController < ApplicationController
 
     @fairy = Fairy.find(params[:fairy_id])
     @booking.fairy = @fairy
-   
+
     if @booking.save
       redirect_to booking_path(@booking)
     else
