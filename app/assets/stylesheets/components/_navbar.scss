@@ -4,6 +4,17 @@
   background: transparent;
   position: absolute;
   width: 100%;
+  margin: 0px;
+}
+
+.black  {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 12px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,3 +24,5 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+

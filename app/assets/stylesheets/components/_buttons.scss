@@ -20,6 +20,14 @@
     transition: 0.3s;
   }
 
+  .more_fairies.btn-flat{
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: lightpink;
+    transition: 0.3s;
+  }
+
   #view_fairies.btn-flat:hover {
     background: rgb(255, 127, 149);
     color: white;
