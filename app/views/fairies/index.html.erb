@@ -26,7 +26,7 @@
     <% @fairies.each do |fairy| %>
       <div class="col-md-4">
         <div class="fairy-card">
-          <img class="fairy-card-image w-25" src="https://cdn.pixabay.com/photo/2021/11/01/03/24/fairy-6759295_1280.png"/>
+          <img class="fairy-card-image w-50" src="https://cdn.pixabay.com/photo/2021/11/01/03/24/fairy-6759295_1280.png"/>
           <div class="fairy-card-content">
             <div class="fairy-card-title">
               <h4><%= fairy.name %></h4>
@@ -34,7 +34,7 @@
             <p><%= fairy.description %></p>
             <div class="flex">
               <div class="flex">
-                <i class="material-icons me-2">🧚🏼</i><span>€ <%= fairy.price %></span>
+                <i class="material-icons me-2">🧚🏼</i><span>€<%= fairy.price %></span>
               </div>
               <div class="flex ms-3">
                 <i class="material-icons me-2"><strong>Power:</strong> <%= fairy.super_power %></i> 
