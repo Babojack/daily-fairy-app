@@ -6,7 +6,7 @@
       <ul class="list-group mb-3">
         <% @fairies.each do |fairy| %>
           <li class="list-group-item">
-          <%= cl_image_tag fairies.photo %>
+            <%= cl_image_tag fairy.photo.key, height: 300, width: 400, crop: :fill %>
             <%= link_to fairy.name, fairy_path(fairy) %>
           </li>
         <% end %>
