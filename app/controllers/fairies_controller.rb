@@ -1,7 +1,13 @@
 class FairiesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   before_action :set_fairy, only: :show
   def index
-    @fairies = Fairy.all
+    if params[:query].present?
+    @fairies = Fairy.search_by_name_and_superpower_description
+   else
+     @fairies = Fairy.all
+   end
   end
 
   def show
@@ -14,7 +20,8 @@ class FairiesController < ApplicationController
   def create
     @fairy = Fairy.create(fairy_params)
     if @fairy.save
-      redirect_to fairy_path(fairy)
+      # The notice will notify us the action has been performed
+      redirect_to fairy_path(fairy), notice: "Student has been created successfully"
     else
       render "new"
     end
