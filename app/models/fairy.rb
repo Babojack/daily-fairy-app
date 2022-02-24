@@ -13,5 +13,4 @@ class Fairy < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-
 end
