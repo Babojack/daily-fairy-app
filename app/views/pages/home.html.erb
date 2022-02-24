@@ -17,34 +17,15 @@
 <% end %>
 
 <h2 class="world-class-fairies"><strong>Find your muse</strong></h2>
-
 <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1524373050940-8f19e9b858a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)">
-    Fairy 1
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://p2.piqsels.com/preview/142/668/57/fairy-girl-fantasy-girl-woman.jpg)">
-    Fairy 2
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/evil-fairy-brenda-cassimiro.jpg)">
-    Fairy 3
-  </div>
+  <% @fairies.each do |fairy|  %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1524373050940-8f19e9b858a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)">
+      <%= fairy.name %>
+      <%# cloudinary_url("sample.jpg", :resource_type => :raw)  %>
+    </div>
+  <% end  %>
 </div>
 
-
-<div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1524373050940-8f19e9b858a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)">
-    Fairy 1
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://p2.piqsels.com/preview/142/668/57/fairy-girl-fantasy-girl-woman.jpg)">
-    Fairy 2
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/evil-fairy-brenda-cassimiro.jpg)">
-    Fairy 3
-  </div>
+<div class="container">
+    <%= link_to "VIEW AVAILABLE FAIRIES 🧚🏼", fairies_path, class:  "btn btn-flat", id: "avail_fairies"  %>
 </div>
-
-<a class="btn btn-flat" href="#" id="more_fairies">VIEW MORE FAIRIES 🧚🏼 </a>

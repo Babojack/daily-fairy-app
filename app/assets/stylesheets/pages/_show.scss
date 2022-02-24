@@ -67,7 +67,11 @@ a, a:active, a:focus {
 }
 
 .text-primary, .text-primary-hover:hover {
-    color: #ff712a !important;
+    color: green !important;
+}
+
+.text-powers, .text-powers-hover:hover {
+    color: black !important;
 }
 
 .mb-0 {
@@ -77,4 +81,9 @@ a, a:active, a:focus {
 
 .mb-1-6, .my-1-6 {
     margin-bottom: 1.6rem;
+}
+
+span {
+    display:inline-block;
+    padding-top: 10px;
 }
