@@ -1,0 +1,16 @@
+<h1>Placed orders</h1>
+      <ul class="list-group mb-3">
+        <% @bookings.each do |booking| %>
+          <li class="list-group-item">
+            <%= link_to booking.fairy.name, dashboard_bookings_path %>
+          </li>
+        <% end %>
+
+
+<h1>Previous bookings</h1>
+      <ul class="list-group mb-3">
+        <% @bookings.each do |booking| %>
+          <li class="list-group-item">
+            <%= link_to booking.fairy.name, dashboard_bookings_path %>
+          </li>
+        <% end %>
