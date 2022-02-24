@@ -1,4 +1,6 @@
 class FairiesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   before_action :set_fairy, only: :show
   def index
     @fairies = Fairy.all
