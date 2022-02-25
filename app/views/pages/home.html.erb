@@ -19,15 +19,20 @@
 <h2 class="world-class-fairies"><strong>Find your muse</strong></h2>
 <div class="cards">
   <% @fairies.each do |fairy|  %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_tag fairy.photo.key %>)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path fairy.photo.key %>)">
        <div class="fairy-card-actions">
+
             <%= link_to fairy.name, fairy_path(fairy) %>
+
           </div>
       <%# cloudinary_url("sample.jpg", :resource_type => :raw)  %>
       <%# <%= cl_image_tag fairy.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
   <% end  %>
 </div>
+
+
+
 
 <div class="container">
     <%= link_to "VIEW AVAILABLE FAIRIES 🧚🏼", fairies_path, class:  "btn btn-flat", id: "avail_fairies"  %>
