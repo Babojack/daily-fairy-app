@@ -29,6 +29,11 @@ class FairiesController < ApplicationController
     end
   end
 
+  def destroy
+    @fairy.destroy
+    redirect_to fairies_url, notice: 'Fairy was successfully deleted.'
+  end
+
   private
 
   def fairy_params
