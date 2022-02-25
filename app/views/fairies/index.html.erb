@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="fairy-card-actions">
-            <%= link_to "VIEW", fairy_path(fairy) %> | <%= link_to "DELETE", fairy_path(fairy), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%= link_to "VIEW", fairy_path(fairy) %> | <%= link_to "EDIT", edit_fairy_path(fairy) %> | <%= link_to "DELETE", fairy_path(fairy), method: :delete, data: {confirm: "Are you sure?"} %>
           </div>
         </div>
       </div>

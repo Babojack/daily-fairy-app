@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <h3>Edit Fairy</h3>
+      <%= simple_form_for (@fairy) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :super_power %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
