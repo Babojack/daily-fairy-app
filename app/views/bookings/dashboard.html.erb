@@ -9,7 +9,7 @@
     <% @bookings.each do |booking| %>
       <div class="col-md-4">
         <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <%= cl_image_tag booking.fairy.photo.key %>
           <div class="card-product-infos">
             <h2><%= booking.fairy.name %></h2>
             <p><strong> Price:</strong>€<%= booking.fairy.price %>
