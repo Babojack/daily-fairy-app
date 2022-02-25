@@ -28,6 +28,12 @@ class FairiesController < ApplicationController
     end
   end
 
+  def destroy
+    @fairy = Fairy.find(params[:id])
+    @fairy.destroy
+    redirect_to fairies_path
+  end
+
   private
 
   def fairy_params
