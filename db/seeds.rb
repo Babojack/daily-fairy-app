@@ -17,7 +17,7 @@ salma = User.create(name: 'Salma',  password: "123456", address: "Ara village  P
 
 Fairy.destroy_all
 
-file_test_0 = URI.open("https://i.pinimg.com/564x/28/6f/ae/286fae582e9b89e2ce1f50bab2ba03a5.jpg")
+file_test_0 = URI.open("https://i.pinimg.com/564x/5d/a3/60/5da360203dc0a46b8e97f77cab5b34cf.jpg")
 tinker = Fairy.create!(name: "Tinker Bell", super_power: "sassy sidekick", description: "A Fairy's work is much more than at first it might appear. Suppose your broken clock ticks, though it hasn't in a year. Perchance you find a toy you lost, or jingling bells you hear. It all means that one very special fairy might be near", price: 250, user: olivier)
 tinker.photo.attach(io: file_test_0, filename: "desk", content_type: 'image/png')
 
@@ -37,11 +37,11 @@ file_test_4 = URI.open("https://i.pinimg.com/564x/99/7e/aa/997eaa3c97429fc631e4a
 fawn = Fairy.create!( name: "Fawn", super_power:"Keep coding, when you're down", description: "Fawn is the one that speaks all languages ever known to man or machine, she speaks Ruby, Java Script,Python, Sql, and the list continues.  She is fluent in almost all animal languages and is considered one of the best of her talent.", price: 500, user: olivier)
 fawn.photo.attach(io: file_test_4, filename: "desk", content_type: 'image/png')
 
-file_test_5 = URI.open("https://i.pinimg.com/564x/28/6f/ae/286fae582e9b89e2ce1f50bab2ba03a5.jpg")
+file_test_5 = URI.open("https://i.pinimg.com/564x/46/8f/4b/468f4b88f0097dd56ee5e1f9af66427e.jpg")
 clank = Fairy.create!(name: "Clank", super_power: "sparrowman", description: "a wonderful personality and is always willing to help others, although sometimes he just makes matters worse.", price: 220, user: salma)
 clank.photo.attach(io: file_test_5, filename: "desk", content_type: 'image/png')
 
-file_test_6 = URI.open("https://i.pinimg.com/564x/5b/b2/87/5bb287dfe0922ef40b86b2c6d8937d32.jpg")
+file_test_6 = URI.open("https://i.pinimg.com/564x/52/ef/e6/52efe662fe1b3c71bd2143c8a413b423.jpg")
 vidia = Fairy.create!(name: "Vidia", super_power: "Speedy logestics", description: "A fast-flying fairy, a true rare talent. And this is but a small part of what she does. She make breezes in the summer, blow down leaves in the fall. Her winds even brought you here, dear. Vidia tends to be secretive, keeping extra pixie dust locked in a box hidden under her bed and racing dragonflies when the other fairies aren't looking.", price: 300, user: salma)
 vidia.photo.attach(io: file_test_6, filename: "desk", content_type: 'image/png')
 
@@ -49,7 +49,7 @@ file_test_7 = URI.open("https://i.pinimg.com/564x/4c/54/81/4c5481d6e32484e02bf92
 fairy = Fairy.create!( name: "Fairy Godmother", super_power: "Hope and optimism", description: "motherly, kind, and genuine character with an optimistically pure heart. She serves as a physical symbol of hope in your darkest hours of despair, when your rake is all red or when your button turns primary blue instead of green', she comes with home cooked meals to remind of you home as well, eat her soup and wake your soul",  price: 500, user: alex)
 fairy.photo.attach(io: file_test_7, filename: "desk", content_type: 'image/png')
 
-file_test_8 = URI.open("https://images6.fanpop.com/image/photos/42700000/magical-fairies-beautiful-things-42771409-564-775.jpg")
+file_test_8 = URI.open("https://i.pinimg.com/564x/90/65/30/906530b4476defcb09e5536f93c4af91.jpg")
 rosetta = Fairy.create!(name: "Rosetta", super_power: "animal and garden talent", description: "a charming and well-mannered garden fairy residing in Pixie Hollow. She shares a sassy streak with Tinker Bell, and in the films speaks with a Southern accent.", price: 220, user: olivier)
 rosetta.photo.attach(io: file_test_8, filename: "desk", content_type: 'image/png')
 

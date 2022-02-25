@@ -1,7 +1,7 @@
 class FairiesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
-  before_action :set_fairy, only: :show
+  before_action :set_fairy, only: [ :show, :edit, :update ]
   def index
     if params[:search].present? && params[:search][:query].present?
       @fairies = Fairy.search_by_name_and_superpower_description(params[:search][:query])
@@ -29,9 +29,23 @@ class FairiesController < ApplicationController
     end
   end
 
+
+  def edit
+  end
+
+  def update
+    if @fairy.update(fairy_params)
+      redirect_to fairies_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
+    @fairy = Fairy.find(params[:id])
     @fairy.destroy
-    redirect_to fairies_url, notice: 'Fairy was successfully deleted.'
+    redirect_to fairies_path
+
   end
 
   private
