@@ -3,8 +3,8 @@ class FairiesController < ApplicationController
 
   before_action :set_fairy, only: :show
   def index
-    if params[:query].present?
-      @fairies = Fairy.search_by_name_and_superpower_description(params[:query])
+    if params[:search].present? && params[:search][:query].present?
+      @fairies = Fairy.search_by_name_and_superpower_description(params[:search][:query])
     else
       @fairies = Fairy.all
     end
