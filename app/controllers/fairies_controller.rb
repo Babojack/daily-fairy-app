@@ -3,15 +3,14 @@ class FairiesController < ApplicationController
 
   before_action :set_fairy, only: :show
   def index
-    if params[:query].present?
-      @fairies = Fairy.search_by_name_and_superpower_description(params[:query])
+    if params[:search].present? && params[:search][:query].present?
+      @fairies = Fairy.search_by_name_and_superpower_description(params[:search][:query])
     else
       @fairies = Fairy.all
     end
   end
 
   def show
-    @booking = Booking.new
   end
 
   def new
@@ -22,7 +21,7 @@ class FairiesController < ApplicationController
     @fairy = Fairy.create(fairy_params)
     if @fairy.save
       # The notice will notify us the action has been performed
-      redirect_to fairy_path(fairy), notice: "Student has been created successfully"
+      redirect_to fairy_path(fairy), notice: "Fairy has been created successfully"
     else
       render "new"
     end
@@ -31,7 +30,7 @@ class FairiesController < ApplicationController
   private
 
   def fairy_params
-    params.require(:fiaries).permit(:name, :super_power, :description, :price, :user, :photo)
+    params.require(:fiaries).permit(:name, :super_power, :description, :price)
   end
 
   def set_fairy
