@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :fairies, only: [:new, :create, :edit]
+  resources :fairies, only: [:new, :create, :edit, :update]
 
   resources :bookings, only: [:show] do
     collection do
