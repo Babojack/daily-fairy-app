@@ -1,7 +1,22 @@
-<h1>Booking history</h1>
-      <ul class="list-group mb-3">
-        <% @bookings.each do |booking| %>
-          <li class="list-group-item">
-            <%= link_to booking.fairy.name, dashboard_bookings_path %>
-          </li>
-        <% end %>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>Booking history</h1>
+    </div>
+  </div>
+  <div class="row">
+    <% @bookings.each do |booking| %>
+      <div class="col-md-4">
+        <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2><%= booking.fairy.name %></h2>
+            <p>€<%= booking.fairy.price %>
+            <p><strong>booked date:</strong></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
