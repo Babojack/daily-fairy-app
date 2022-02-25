@@ -6,7 +6,9 @@
         <%= f.input :super_power %>
         <%= f.input :description %>
         <%= f.input :price %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit %>
+        <%= link_to 'Back', fairies_path %>
       <% end %>
     </div>
   </div>
