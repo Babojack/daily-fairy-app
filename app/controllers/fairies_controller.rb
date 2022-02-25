@@ -30,7 +30,7 @@ class FairiesController < ApplicationController
   private
 
   def fairy_params
-    params.require(:fiaries).permit(:name, :super_power, :description, :price)
+    params.require(:fairy).permit(:name, :super_power, :description, :price)
   end
 
   def set_fairy
