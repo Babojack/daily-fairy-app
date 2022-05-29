@@ -70,6 +70,8 @@ RSpec.configure do |config|
   config.include ViewComponent::TestHelpers, type: :component
   config.include Capybara::RSpecMatchers, type: :component
 
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :system
   config.include Rails.application.routes.url_helpers, type: :request
   config.include Capybara::RSpecMatchers, type: :request
 end
