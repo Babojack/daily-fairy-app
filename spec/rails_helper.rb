@@ -62,4 +62,22 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  config.before(:example, type: :system) do
+    driven_by(:selenium_chrome_headless)
+    Capybara.page.current_window.resize_to(1280, 800)
+  end
+  config.include ViewComponent::TestHelpers, type: :component
+  config.include Capybara::RSpecMatchers, type: :component
+
+  config.include Rails.application.routes.url_helpers, type: :request
+  config.include Capybara::RSpecMatchers, type: :request
+end
+
+
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
 end
