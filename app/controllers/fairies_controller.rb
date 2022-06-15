@@ -29,6 +29,7 @@ class FairiesController < ApplicationController
     end
   end
 
+
   def edit
   end
 
@@ -44,6 +45,7 @@ class FairiesController < ApplicationController
     @fairy = Fairy.find(params[:id])
     @fairy.destroy
     redirect_to fairies_path
+
   end
 
   private
