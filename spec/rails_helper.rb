@@ -67,7 +67,7 @@ RSpec.configure do |config|
     driven_by(:selenium_chrome_headless)
     Capybara.page.current_window.resize_to(1280, 800)
   end
-  config.include ViewComponent::TestHelpers, type: :component
+  # config.include ViewComponent::TestHelpers, type: :component
   config.include Capybara::RSpecMatchers, type: :component
 
   config.include Devise::Test::IntegrationHelpers, type: :request
@@ -82,4 +82,4 @@ end
       with.test_framework :rspec
       with.library :rails
     end
-end
+  end
