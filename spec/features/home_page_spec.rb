@@ -4,7 +4,7 @@ RSpec.describe "home page" do
   before(:each) do
     visit "/"
   end
-  it "user can see some unclickable texts" do
+  it "allows user to see some unclickable texts" do
     expect(page).to have_content("Find your muse")
     expect(page).to have_content("DAILY FAIRIES")
     expect(page).to have_content("Magical creatures for cheap people!")
