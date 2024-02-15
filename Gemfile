@@ -73,3 +73,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "open-uri", "~> 0.2.0"
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
+
+gem "net-smtp", "~> 0.4.0", :require => false
+
+gem "net-imap", "~> 0.4.10", :require => false
+
+gem "net-pop", "~> 0.1.2", :require => false
