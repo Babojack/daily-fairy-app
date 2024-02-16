@@ -86,4 +86,5 @@ test:
 production:
   <<: *default
   database: daily_fairy_app_production
+  password: postgres
 
