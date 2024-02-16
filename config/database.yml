@@ -21,7 +21,7 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: <%= ENV['POSTGRES_HOST'] %>
-  username: daily_fairy_app
+  username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['DAILY_FAIRY_APP_DATABASE_PASSWORD'] %>
   port: 5433
 
@@ -86,5 +86,5 @@ test:
 production:
   <<: *default
   database: daily_fairy_app_production
-  password: postgres
+
 
